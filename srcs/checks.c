@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:08:59 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/20 20:23:02 by snunez-p         ###   ########.fr       */
+/*   Updated: 2025/05/21 19:15:03 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	chck_num(char *str)
 {
@@ -22,7 +22,10 @@ int	chck_num(char *str)
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	if (!str[i])
+	{
+		error_exit()
 		return (0);
+	}
 	while (str[i])
 	{
 		if (ft_isdigit(str[i]))
@@ -69,8 +72,24 @@ int	chck_int(char *str)
 		return (0);
 }
 
-int	chck_double(char **stck)
+int	chck_ifdouble(char **stck)
 {
+	int	i;
+	int j;
 
+	if (!stck)
+		return (0);
+	i = 0;
+	while (stck[i])
+	{
+		j = i + 1;
+		while (stck[j])
+		{
+			if (ft_atoll(stck[i]) == ft_atoll(stck[j]))
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
 }
-

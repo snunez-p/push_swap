@@ -6,9 +6,11 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 02:19:09 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/18 00:19:39 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/21 19:24:09 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#includes "../includes/push_swap.h"
 
 void    sort_2(t_stack *a)
 {
@@ -55,6 +57,7 @@ void    sort_4 (t_stack *a, t_stack *b)
 {
     int     s;
     int min_o;
+    int pos;
 
     s = ft_stcksize(a);
     if (s == 4)

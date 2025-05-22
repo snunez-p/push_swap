@@ -6,15 +6,15 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:37:05 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/18 00:02:03 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/21 17:54:29 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//meter en short_sorts
+#include "../includes/push_swap.h"
 
 int min_occ(t_stack *stck)
 {
-	t_node *act;
+	t_list *act;
   int 	min_o;
 	
 	act = stck->first;
@@ -29,7 +29,7 @@ int min_occ(t_stack *stck)
 
 int max_occ(t_stck *stck)
 {
-	t_node *act;
+	t_list *act;
   int 	max_o;
 	
 	act = stck->first;

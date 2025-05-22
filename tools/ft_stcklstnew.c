@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stcklstnew.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 17:16:13 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/14 19:33:18 by snunez-p         ###   ########.fr       */
+/*   Updated: 2025/05/21 18:00:11 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 t_list *ft_stcklstnew(int value)
 {

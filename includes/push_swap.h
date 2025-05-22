@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 08:32:01 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/14 19:12:16 by snunez-p         ###   ########.fr       */
+/*   Updated: 2025/05/22 08:30:45 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include <stdlib.h>
 # include "../libft/libft.h"
-
-//poner funciones
+# include <unistd.h>
+# include <stdio.h>
+# include <string.h>
 
 typedef struct s_list
 {
@@ -54,17 +55,42 @@ void	rr(t_stack *a, t_stack *b);
 void	rra(t_stack *a);
 void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
+
+//short sorts
+//short sorts
+void	sort_2(t_stack *a);
+void	sort_3(t_stack *a);
+void	sort_4(t_stack *a, t_stack *b);
+//short sorts 2
+void	sort_5(t_stack *a, t_stack *b);
+void	sort_6(t_stack *a, t_stack *b);
+void	sort_7(t_stack *a, t_stack *b);
+
 //srcs
+//checks
 int	chck_num(char *str);
 long long ft_atoll(const char *str);
 int	chck_int(char *str);
+int chck_ifdouble(t_stack *stck);
+//checks2.0
+int validate_args(char **args);
+//parseo
+void	parseo(t_box *stck, int ac, char **av);
+void	error_exit(char **args_split);
+char **split_args(char **args);
+void	free_split(char **args_split);
 
 //tools
-t_list	*ft_exterminio_total_stack(t_stack *stck);
-void	ft_stackadd_front(t_stack *stck, t_list *index);
-void	ft_swap_g(t_stack *stck);
-void	ft_stackmove_back(t_stack *stck);
 void	ft_back2front(t_stack *stck);
+t_list	*ft_exterminio_total_stack(t_stack *stck);
+int ft_findp(t_stack *a, int value);
 t_list	*ft_iterxsize_stack(t_stack *stck);
+void	ft_stackadd_front(t_stack *stck, t_list *index);
+void	ft_stackmove_back(t_stack *stck);
 t_list *ft_stcklstnew(int value);
+void	ft_swap_g(t_stack *stck);
+//min&max_occ
+int min_occ(t_stack *stck);
+int max_occ(t_stack *stck);
+
 #endif

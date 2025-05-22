@@ -6,11 +6,12 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 00:21:55 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/18 00:23:57 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/21 17:58:53 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //chequear si ya no la he hecho, si no, ponerla en utils
+#include "../includes/push_swap.h"
 
 void bring_to_top(t_stack *a, int pos)
 {

@@ -6,10 +6,11 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 00:02:37 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/18 00:19:55 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:02:06 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+·includes "../includes/push_swap.h"
 void    sort_5(t_stack *a, t_stack *b)
 {
     int	s;
@@ -41,7 +42,7 @@ void    sort_6(t_stack *a, t_stack *b)
 			pos = ft_findp(a, min_o);
 			bring_to_top(a, pos);
 			pb(a, b);
-			sort_4and5(a);
+			sort_5(a);
 			pa(a, b);
     }
 }

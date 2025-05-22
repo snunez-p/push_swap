@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+         #
+#    By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/01 08:46:12 by snunez-p          #+#    #+#              #
-#    Updated: 2025/05/14 19:14:02 by snunez-p         ###   ########.fr        #
+#    Updated: 2025/05/22 08:34:56 by amaltea          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,15 +19,22 @@ SRCS =	operations/push.c \
 				operations/reverse_rotate.c\
 				operations/rotate.c\
 				operations/swap.c\
+				short_sorts/short_sort.c\
+				short_sorts/short_sort_2.c\
 				srcs/checks.c\
+				srcs/checks2.0.c\
+				srcs/parseo.c\
 				srcs/push_swap.c\
+				tools/ft_bring2top.c\
 				tools/ft_back2front.c\
 				tools/ft_exterminio_total_stack.c \
+				tools/ft_findp.c\
 				tools/ft_iterxsize_stack.c\
 				tools/ft_stackadd_front.c\
 				tools/ft_stackmove_back.c\
 				tools/ft_stcklstnew.c\
-				tools/ft_swap_g.c
+				tools/ft_swap_g.c\
+				tools/min&max_occ.c
 
 OBJS = $(SRCS:.c=.o)
 

@@ -6,11 +6,12 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 00:00:13 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/18 00:14:16 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/21 17:59:51 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //incluir esta función el utils
+#include "../includes/push_swap.h"
 
 int	findp(t_stack *a, int value)
 {
