@@ -6,11 +6,11 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 02:19:09 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/21 19:24:09 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/24 18:04:38 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#includes "../includes/push_swap.h"
+#include "push_swap.h"
 
 void    sort_2(t_stack *a)
 {
@@ -23,16 +23,14 @@ void    sort_2(t_stack *a)
 
 void    sort_3(t_stack *a)
 {
-    int     s;
     int     first;
     int     second;
     int     third;
 
-    s = ft_stcksize(a);
     first = a -> first -> value;
     second = a -> first -> next -> value;
     third = a -> last -> value;
-    if (s == 3)
+    if (a -> size == 3)
     {  
         if (first > second && second < third && third > first)
             sa(a);
@@ -55,19 +53,16 @@ void    sort_3(t_stack *a)
 
 void    sort_4 (t_stack *a, t_stack *b)
 {
-    int     s;
     int min_o;
     int pos;
 
-    s = ft_stcksize(a);
-    if (s == 4)
+    if (a -> size == 4)
     {
         min_o = min_occ(a);
-        pos = ft_findp(a, min);
+        pos = ft_findp(a, min_o);
         bring_to_top(a, pos);
         pb(a, b);
         sort_3(a);
         pa(a, b);
     }
-    
 }

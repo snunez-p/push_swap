@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exterminio_total_stack.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 08:26:57 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/07 16:55:15 by snunez-p         ###   ########.fr       */
+/*   Updated: 2025/05/24 22:39:27 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 // (Stack pop, saca el elemento de arriba)
 

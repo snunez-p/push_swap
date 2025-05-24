@@ -6,21 +6,19 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 00:02:37 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/21 18:02:06 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/24 17:47:19 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-·includes "../includes/push_swap.h"
+#include "push_swap.h"
 void    sort_5(t_stack *a, t_stack *b)
 {
-    int	s;
 		int min_o;
 		int pos;
     
-    s = ft_stcksize(a);
-    if (s == 5)
+    if (a -> size == 5)
     {
-        min_o = min_o_occ(a);
+        min_o = min_occ(a);
         pos = ft_findp(a, min_o);
         bring_to_top(a, pos);
         pb(a, b);
@@ -31,36 +29,32 @@ void    sort_5(t_stack *a, t_stack *b)
 
 void    sort_6(t_stack *a, t_stack *b)
 {
-    int	s;
 		int	min_o;
 		int	pos;
 
-    s = ft_stcksize(a);
-    if (s == 6)
+    if (a -> size == 6)
     {
-			min_o = min_o_occ(a);
+			min_o = min_occ(a);
 			pos = ft_findp(a, min_o);
 			bring_to_top(a, pos);
 			pb(a, b);
-			sort_5(a);
+			sort_5(a, b);
 			pa(a, b);
     }
 }
 
 void    sort_7(t_stack *a, t_stack *b)
 {
-    int	s;
 		int	min_o;
 		int	pos;
 
-    s = ft_stcksize(a);
-    if (s == 7)
+    if (a -> size == 7)
     {
-			min_o = min_o_occ(a);
+			min_o = min_occ(a);
 			pos = ft_findp(a, min_o);
       bring_to_top(a, pos);
 			pb(a, b);
-			sort_6(a);
+			sort_6(a, b);
 			pa(a, b);
     }
 }

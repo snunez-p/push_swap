@@ -6,7 +6,7 @@
 #    By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/01 08:46:12 by snunez-p          #+#    #+#              #
-#    Updated: 2025/05/22 08:34:56 by amaltea          ###   ########.fr        #
+#    Updated: 2025/05/24 22:37:28 by amaltea          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,28 +19,32 @@ SRCS =	operations/push.c \
 				operations/reverse_rotate.c\
 				operations/rotate.c\
 				operations/swap.c\
-				short_sorts/short_sort.c\
-				short_sorts/short_sort_2.c\
+				short_sorts/short_sorts.c\
+				short_sorts/short_sorts_2.c\
 				srcs/checks.c\
 				srcs/checks2.0.c\
+				srcs/ksort.c\
 				srcs/parseo.c\
 				srcs/push_swap.c\
-				tools/ft_bring2top.c\
+				tools/bring2top.c\
 				tools/ft_back2front.c\
 				tools/ft_exterminio_total_stack.c \
 				tools/ft_findp.c\
 				tools/ft_iterxsize_stack.c\
 				tools/ft_stackadd_front.c\
 				tools/ft_stackmove_back.c\
+				tools/ft_stckaddback.c\
+				tools/ft_stcklstclear.c\
 				tools/ft_stcklstnew.c\
 				tools/ft_swap_g.c\
-				tools/min&max_occ.c
+				tools/min_max_occ.c\
+				tools/tbo.c
 
 OBJS = $(SRCS:.c=.o)
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra -I./includes -I$(LIBFT_DIR)
+CFLAGS = -Wall -Werror -Wextra -I./includes -I$(LIBFT_DIR)#-fsanitize=address,leak,undefined
 
 all: $(NAME)
 

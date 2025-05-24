@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_g.c                                        :+:      :+:    :+:   */
+/*   ft_stcklstclear.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 13:23:55 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/24 22:38:55 by amaltea          ###   ########.fr       */
+/*   Created: 2025/05/24 16:13:17 by amaltea           #+#    #+#             */
+/*   Updated: 2025/05/24 17:17:32 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_swap_g(t_stack *stck)
+void ft_stcklstclear(t_stack *stck)
 {
 	t_list	*index;
+	t_list *next;
 
-	if (stck -> size < 2)
-		return ;
 	index = stck -> first;
-	stck -> first = index -> next;
-	index -> next = stck -> first -> next;
-	stck->first->next = index;
-	if (stck -> size == 2)
-		stck -> last = index;
+	while (index)
+	{
+		next = index -> next;
+		free(index);
+		index = next;
+	}
+	stck -> first = NULL;
+	stck -> last = NULL;
+	stck -> size = 0;
 }

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stackmove_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 13:48:10 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/07 16:55:31 by snunez-p         ###   ########.fr       */
+/*   Updated: 2025/05/24 22:39:08 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	ft_stackmove_back(t_stack *stck)
 {
@@ -18,7 +18,6 @@ void	ft_stackmove_back(t_stack *stck)
 
 	if (!stck || !stck->first || !stck->first->next)
 		return ;
-
 	temp = stck -> first;
 	stck -> first = temp -> next;
 	stck -> last -> next = temp;

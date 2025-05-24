@@ -6,11 +6,11 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 13:41:49 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/21 18:02:27 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/24 22:40:44 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	ra(t_stack *a)
 {

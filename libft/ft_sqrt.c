@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_g.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 13:23:55 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/24 22:38:55 by amaltea          ###   ########.fr       */
+/*   Created: 2025/05/24 21:42:28 by amaltea           #+#    #+#             */
+/*   Updated: 2025/05/24 21:47:52 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	ft_swap_g(t_stack *stck)
+int ft_sqrt(int n)
 {
-	t_list	*index;
+	int i;
 
-	if (stck -> size < 2)
-		return ;
-	index = stck -> first;
-	stck -> first = index -> next;
-	index -> next = stck -> first -> next;
-	stck->first->next = index;
-	if (stck -> size == 2)
-		stck -> last = index;
+	if (n <= 0)
+		return (0);
+	i = 1;
+	while (i * i < n && i <= 2147483647 / i)
+		i++;
+	if (i * i == n)
+		return (i);
+	return (i - 1);
 }

@@ -6,18 +6,17 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 00:21:55 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/21 17:58:53 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/24 22:39:41 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//chequear si ya no la he hecho, si no, ponerla en utils
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void bring_to_top(t_stack *a, int pos)
 {
     int size;
 		
-		size = ft_stcksize(a);
+    size = a -> size;
 		if (pos <= size / 2)
     {
       while (pos-- > 0)

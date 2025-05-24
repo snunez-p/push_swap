@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_g.c                                        :+:      :+:    :+:   */
+/*   ft_stckaddback.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 13:23:55 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/24 22:38:55 by amaltea          ###   ########.fr       */
+/*   Created: 2025/05/24 15:40:08 by amaltea           #+#    #+#             */
+/*   Updated: 2025/05/24 18:45:47 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_swap_g(t_stack *stck)
+void ft_stckaddback(t_stack *stck, t_list *index)
 {
-	t_list	*index;
-
-	if (stck -> size < 2)
+	if (index == NULL)
 		return ;
-	index = stck -> first;
-	stck -> first = index -> next;
-	index -> next = stck -> first -> next;
-	stck->first->next = index;
-	if (stck -> size == 2)
+	if (stck -> size == 0)
+	{
+		stck -> first = index;
 		stck -> last = index;
+		stck -> size = stck -> size + 1;
+	}
+	else
+	{
+		stck -> last -> next = index;
+		stck -> last = index;
+		stck -> size = stck -> size + 1;
+	}
 }

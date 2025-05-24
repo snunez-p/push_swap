@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 10:51:29 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/07 19:45:09 by snunez-p         ###   ########.fr       */
+/*   Updated: 2025/05/24 22:40:37 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	sa(t_stack *a)
 {

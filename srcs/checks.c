@@ -6,11 +6,11 @@
 /*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:08:59 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/21 19:15:03 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/24 20:01:00 by amaltea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	chck_num(char *str)
 {
@@ -23,7 +23,7 @@ int	chck_num(char *str)
 		i++;
 	if (!str[i])
 	{
-		error_exit()
+		error_exit(&str);
 		return (0);
 	}
 	while (str[i])
@@ -72,24 +72,36 @@ int	chck_int(char *str)
 		return (0);
 }
 
-int	chck_ifdouble(char **stck)
+int	chck_ifdouble(int size, char **args)
 {
 	int	i;
 	int j;
 
-	if (!stck)
-		return (0);
 	i = 0;
-	while (stck[i])
+	while (i < size)
 	{
 		j = i + 1;
-		while (stck[j])
+		while (j < size)
 		{
-			if (ft_atoll(stck[i]) == ft_atoll(stck[j]))
+			if (ft_atoll(args[i]) == ft_atoll(args[j]))
 				return (1);
 			j++;
 		}
 		i++;
 	}
 	return (0);
+}
+
+int is_sorted(t_stack stck)
+{
+	t_list	*index;
+	
+	index = stck.first;
+	while (index != NULL && index -> next != NULL)
+	{
+		if (index -> value > index -> next -> value)
+			return (0);
+		index = index -> next;
+	}
+	return (1);
 }
