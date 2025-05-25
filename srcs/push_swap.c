@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
+/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 19:57:17 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/24 22:58:27 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/25 20:24:51 by snunez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	parseo(&ps, argc, argv);
-	// imprimir_rapido(&ps);
 	if (is_sorted(ps.a))
 		;
 	else if (ps.a.size == 2)
@@ -39,4 +38,3 @@ int	main(int argc, char **argv)
 	ft_stcklstclear(&ps.a);
 	ft_stcklstclear(&ps.b);
 }
-

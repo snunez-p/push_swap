@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exterminio_total_stack.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
+/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 08:26:57 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/24 22:39:27 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/25 20:25:08 by snunez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ t_list	*ft_exterminio_total_stack(t_stack *stck)
 {
 	t_list	*index;
 
-	if (stck -> size == 0)
+	if (stck->size == 0)
 		return (NULL);
-	index = stck -> first;
-	stck -> first = stck-> first -> next;
-	index -> next = NULL;
-	stck -> size = stck -> size - 1;
-	if (stck -> size == 0)
-		stck -> last = NULL;
+	index = stck->first;
+	stck->first = stck->first->next;
+	index->next = NULL;
+	stck->size = stck->size - 1;
+	if (stck->size == 0)
+		stck->last = NULL;
 	return (index);
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+         #
+#    By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/01 08:46:12 by snunez-p          #+#    #+#              #
-#    Updated: 2025/05/24 22:37:28 by amaltea          ###   ########.fr        #
+#    Updated: 2025/05/25 20:38:21 by snunez-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ OBJS = $(SRCS:.c=.o)
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra -I./includes -I$(LIBFT_DIR)#-fsanitize=address,leak,undefined
+CFLAGS = -Wall -Werror -Wextra -I./includes -I$(LIBFT_DIR)
 
 all: $(NAME)
 

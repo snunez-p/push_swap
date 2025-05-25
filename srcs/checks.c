@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
+/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:08:59 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/24 20:01:00 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/25 20:24:35 by snunez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	chck_num(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!str)
@@ -39,8 +39,8 @@ int	chck_num(char *str)
 long long	ft_atoll(const char *str)
 {
 	long long	res;
-	int				i;
-	int				signo;
+	int			i;
+	int			signo;
 
 	i = 0;
 	while (str[i] == ' ')
@@ -75,7 +75,7 @@ int	chck_int(char *str)
 int	chck_ifdouble(int size, char **args)
 {
 	int	i;
-	int j;
+	int	j;
 
 	i = 0;
 	while (i < size)
@@ -92,16 +92,16 @@ int	chck_ifdouble(int size, char **args)
 	return (0);
 }
 
-int is_sorted(t_stack stck)
+int	is_sorted(t_stack stck)
 {
 	t_list	*index;
-	
+
 	index = stck.first;
-	while (index != NULL && index -> next != NULL)
+	while (index != NULL && index->next != NULL)
 	{
-		if (index -> value > index -> next -> value)
+		if (index->value > index->next->value)
 			return (0);
-		index = index -> next;
+		index = index->next;
 	}
 	return (1);
 }

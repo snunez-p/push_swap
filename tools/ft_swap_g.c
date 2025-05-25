@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap_g.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
+/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 13:23:55 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/24 22:38:55 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/25 20:26:14 by snunez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	ft_swap_g(t_stack *stck)
 {
 	t_list	*index;
 
-	if (stck -> size < 2)
+	if (stck->size < 2)
 		return ;
-	index = stck -> first;
-	stck -> first = index -> next;
-	index -> next = stck -> first -> next;
+	index = stck->first;
+	stck->first = index->next;
+	index->next = stck->first->next;
 	stck->first->next = index;
-	if (stck -> size == 2)
-		stck -> last = index;
+	if (stck->size == 2)
+		stck->last = index;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_back2front.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
+/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 15:56:10 by snunez-p          #+#    #+#             */
-/*   Updated: 2025/05/24 22:39:32 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/25 20:25:03 by snunez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	ft_back2front(t_stack *stck)
 	if (!stck || !stck->first || !stck->first->next)
 		return ;
 	prev = ft_iterxsize_stack(stck);
-	temp = stck -> last;
-	prev -> next = NULL;
-	temp -> next = stck -> first;
-	stck -> first = temp;
-	stck -> last = prev;
+	temp = stck->last;
+	prev->next = NULL;
+	temp->next = stck->first;
+	stck->first = temp;
+	stck->last = prev;
 }

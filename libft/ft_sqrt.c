@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaltea <amaltea@student.42.fr>            +#+  +:+       +#+        */
+/*   By: snunez-p <snunez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 21:42:28 by amaltea           #+#    #+#             */
-/*   Updated: 2025/05/24 21:47:52 by amaltea          ###   ########.fr       */
+/*   Updated: 2025/05/25 20:22:04 by snunez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_sqrt(int n)
+int	ft_sqrt(int n)
 {
-	int i;
+	int	i;
 
 	if (n <= 0)
 		return (0);
